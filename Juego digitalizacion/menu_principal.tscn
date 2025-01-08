@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgo6v4ly6dhkt"]
+
+[ext_resource type="Script" path="res://Button.gd" id="1_ti1yq"]
+
+[node name="Menu principal" type="Node2D"]
+
+[node name="Button" type="Button" parent="."]
+offset_left = 334.0
+offset_top = 131.0
+offset_right = 518.0
+offset_bottom = 213.0
+text = "Jugar"
+script = ExtResource("1_ti1yq")
+
+[node name="Button2" type="Button" parent="."]
+offset_left = 337.0
+offset_top = 283.0
+offset_right = 517.0
+offset_bottom = 365.0
+text = "Controles"
+
+[node name="Button3" type="Button" parent="."]
+offset_left = 346.0
+offset_top = 422.0
+offset_right = 518.0
+offset_bottom = 506.0
+text = "Créditos"
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button3" to="Button" method="_on_button_3_pressed"]
