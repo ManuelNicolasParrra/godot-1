@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dbt8khgty7wq1"]
+
+[ext_resource type="Script" path="res://jugar.gd" id="1_me8dn"]
+[ext_resource type="Texture2D" uid="uid://cw10ogfuum42f" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_1hxbv"]
+
+[node name="Jugar" type="Node2D"]
+script = ExtResource("1_me8dn")
+
+[node name="Abstract-futuristic-gaming-background-for-offline-twitch-stream-vector" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+scale = Vector2(3.76393, 3.225)
+texture = ExtResource("2_1hxbv")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 501.0
+offset_right = 191.0
+offset_bottom = 565.0
+text = "Volver"
+
+[connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]

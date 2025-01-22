@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://be6oyrpnk1gak"]
+
+[ext_resource type="Script" path="res://controles.gd" id="1_ylg6s"]
+[ext_resource type="Texture2D" uid="uid://cw10ogfuum42f" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_2mpsh"]
+
+[node name="Controles" type="Node2D"]
+script = ExtResource("1_ylg6s")
+
+[node name="Abstract-futuristic-gaming-background-for-offline-twitch-stream-vector" type="Sprite2D" parent="."]
+position = Vector2(579, 327.5)
+scale = Vector2(3.77049, 3.265)
+texture = ExtResource("2_2mpsh")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 41.0
+offset_top = 497.0
+offset_right = 277.0
+offset_bottom = 589.0
+text = "Volver"
+
+[connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]
