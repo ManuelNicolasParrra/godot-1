@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://be6oyrpnk1gak"]
+[gd_scene load_steps=4 format=3 uid="uid://by5k8ai5vt3hk"]
 
 [ext_resource type="Script" path="res://controles.gd" id="1_ylg6s"]
-[ext_resource type="Texture2D" uid="uid://cw10ogfuum42f" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_2mpsh"]
+[ext_resource type="Texture2D" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_2mpsh"]
+[ext_resource type="AudioStream" path="res://loop-file-16-beat-technoelectronic-style-beat-153147.mp3" id="3_io2ra"]
 
 [node name="Controles" type="Node2D"]
 script = ExtResource("1_ylg6s")
@@ -17,5 +18,21 @@ offset_top = 497.0
 offset_right = 277.0
 offset_bottom = 589.0
 text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_io2ra")
+volume_db = -10.0
+autoplay = true
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 483.0
+offset_top = 257.0
+offset_right = 714.0
+offset_bottom = 376.0
+text = "W---------------------->Alante
+S---------------------->Atrás
+A---------------------->Izquierda
+D----------------------> Derecha"
+caret_blink_interval = 0.45
 
 [connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]
