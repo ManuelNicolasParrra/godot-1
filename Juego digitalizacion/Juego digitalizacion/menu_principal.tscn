@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://beqw32we8py0t"]
+
+[ext_resource type="Script" path="res://menu_principal.gd" id="1_8vye2"]
+[ext_resource type="Texture2D" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_15bh7"]
+[ext_resource type="AudioStream" path="res://loop-file-16-beat-technoelectronic-style-beat-153147.mp3" id="3_x3x4g"]
+
+[node name="Menu principal" type="Node2D"]
+script = ExtResource("1_8vye2")
+
+[node name="Abstract-futuristic-gaming-background-for-offline-twitch-stream-vector" type="Sprite2D" parent="."]
+position = Vector2(1, 4)
+scale = Vector2(3.76721, 3.225)
+texture = ExtResource("2_15bh7")
+centered = false
+
+[node name="Jugar" type="Button" parent="."]
+offset_left = 522.0
+offset_top = 252.0
+offset_right = 694.0
+offset_bottom = 283.0
+text = "Jugar"
+
+[node name="Controles" type="Button" parent="."]
+offset_left = 543.0
+offset_top = 334.0
+offset_right = 669.0
+offset_bottom = 365.0
+text = "Controles"
+
+[node name="Créditos" type="Button" parent="."]
+offset_left = 541.0
+offset_top = 416.0
+offset_right = 673.0
+offset_bottom = 447.0
+button_mask = 0
+text = "Créditos"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x3x4g")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Jugar" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Jugar" to="." method="_on_jugar_pressed"]
+[connection signal="pressed" from="Controles" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Créditos" to="." method="_on_créditos_pressed"]

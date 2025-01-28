@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvoas0q578oh1"]
+
+[ext_resource type="Script" path="res://créditos.gd" id="1_1q6jk"]
+[ext_resource type="Texture2D" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_gkva7"]
+[ext_resource type="AudioStream" path="res://loop-file-16-beat-technoelectronic-style-beat-153147.mp3" id="3_n7dwe"]
+
+[node name="Créditos" type="Node2D"]
+script = ExtResource("1_1q6jk")
+
+[node name="Abstract-futuristic-gaming-background-for-offline-twitch-stream-vector" type="Sprite2D" parent="."]
+position = Vector2(576.5, 325)
+scale = Vector2(3.76721, 3.24)
+texture = ExtResource("2_gkva7")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 39.0
+offset_top = 501.0
+offset_right = 197.0
+offset_bottom = 591.0
+text = "Volver"
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 337.0
+offset_top = 169.0
+offset_right = 912.0
+offset_bottom = 419.0
+theme_override_font_sizes/font_size = 40
+text = "Este juego fue creado por
+Manuel Nicolás Parra
+Alumno de 2º de Bachillerato
+En el IES Francisco Salzillo"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_n7dwe")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Volver" to="." method="_on_volver_pressed"]

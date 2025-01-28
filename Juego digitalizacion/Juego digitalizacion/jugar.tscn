@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://diq35v4ewra06"]
+
+[ext_resource type="Script" path="res://jugar.gd" id="1_me8dn"]
+[ext_resource type="Texture2D" path="res://abstract-futuristic-gaming-background-for-offline-twitch-stream-vector.jpg" id="2_1hxbv"]
+[ext_resource type="AudioStream" path="res://loop-file-16-beat-technoelectronic-style-beat-153147.mp3" id="3_gxxlj"]
+
+[node name="Jugar" type="Node2D"]
+script = ExtResource("1_me8dn")
+
+[node name="Abstract-futuristic-gaming-background-for-offline-twitch-stream-vector" type="Sprite2D" parent="."]
+position = Vector2(576, 326)
+scale = Vector2(3.76393, 3.225)
+texture = ExtResource("2_1hxbv")
+
+[node name="Volver" type="Button" parent="."]
+offset_left = 70.0
+offset_top = 501.0
+offset_right = 191.0
+offset_bottom = 565.0
+text = "Volver"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_gxxlj")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="pressed" from="Volver" to="." method="_on_button_pressed"]
